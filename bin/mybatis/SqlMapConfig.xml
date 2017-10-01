@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- 设置别名 -->
+	<typeAliases>
+		<!-- 批量定义别名，mybatis自动扫描包，将pojo类定义别名，别名为类名，首字母大小写均可 -->
+		<package name="cn.parker.ssm.po"/>
+		<package name="cn.parker.ssm.dao"/>
+	</typeAliases>
+	
+	
+	<!-- 加载映射文件 -->
+	<mappers>
+		<mapper resource="sqlmap/Users.xml"/> 
+		
+		<!-- 通过mapper接口加载多个配置文件——》推荐使用
+		遵循规范：需要将mapper接口名称与mapper配置文件名称保持一致，且在同一目录下
+		规范的前提：使用mapper代理的方法 -->
+	<!-- 	<package name="cn.parker.ssm.mapper"/> -->
+	</mappers>
+	
+</configuration>
+
+
+
